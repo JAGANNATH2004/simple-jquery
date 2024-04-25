@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn JQuery</title>
+<style>
+    .container{
+        background-color: aliceblue;
+        width: 50%;
+        height: 130px;
+        border:1px solid red;
+    }
+    .container1{
+        background-color: aliceblue;
+        width: 500px;
+        height:150px;
+        border:1px solid red;
+    }    #first{
+        width:fit-content;
+    }
+    .container2{
+        background-color: aliceblue;
+        width: 500px;
+        height:180px;
+        border:1px solid red;
+    }
+    .container3{
+        background-color: aliceblue;
+        width: 500px;
+        height:390px;
+        border:1px solid red;
+    }
+    .container5{
+        background-color: aliceblue;
+        width: 500px;;
+        height:400px;
+        border:1px solid red;
+    }
+    body{
+        background-image: url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #0dff00;
+        border: solid 1px #c3c3c3;
+        width:fit-content
+    }
+    #panel {
+        display: none;
+    }
+    #p, #f {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #973737;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#p {
+  padding: 50px;
+  display: none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#p0").hide();
+        $("#b1").mouseenter(function(){
+            $("#p0").show();
+        });
+        $("#b1").mouseleave(function(){
+            $("#p0").hide();
+        });
+        $("#p1").hide();
+        $("#b2").mouseenter(function(){
+            $("#p1").show();
+        });
+        $("#p2").hide();
+        $("#b3").mouseleave(function(){
+            $("#p2").show();
+        }); 
+        $("#i4").hide(); 
+        $("#b4").click(function(){
+            $("#i4").show();
+        });
+        $("#i5").hide();
+        $("#b5").dblclick(function(){
+            $("#i5").show();
+        });
+        $("#b7").click(function(){
+            $("#1").hide("slow", function(){
+                alert("The paragraph is now hidden");
+            });
+        });
+        $("#b8").click(function(){
+            $("#2").css("color", "red").slideUp(2000).slideDown(200);
+        })
+        $("#btn2").click(function(){
+            $("#test2").html("<h1>WEB 2.0</h1>");
+        });
+        $("#b10").click(function(){
+            $("#presi").attr("href", "https://presidency.nopaperforms.com/bca-application-form");
+        });
+        $("#b01").click(function(){
+            $("#div1").load("text.txt");
+        });
+        $("#b20").click(function(){
+            $("#90").fadeToggle("slow");
+            $("#91").fadeToggle(2000);
+            $("#92").fadeToggle(3000);
+        });
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+         });
+        $("#f").click(function(){
+                $("#p").slideDown(5000);
+        });
+        $("#s").click(function(){
+            $("#p").stop();
+        });
+        $("#bp").click(function(){
+        $("#d8").animate({right: '550px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'});
+        });
+        $("#bh").click(function(){
+        $("#d99").remove();
+        });
+        $("#bg").click(function(){
+            $("#d98").empty();
+        });
+        $("input").keypress(function(){
+        $("span").text(i += 1);
+        });
+    });
+</script>
+</head>
+<body><center>
+    <header style="background-color: rgb(168, 192, 51);width:fit-content">
+    <h1><u>Learn Js Query</u></h1>
+    </header></center>
+    <hr><hr><center>
+        <div id="first"><h2 style="background-color: aliceblue;"><b><u>Learn Jquery with this website by going to each bolck and follow the lines given in each block</u></b></h2></div>
+    <div class="container">
+        <h3>1)  <u>HOVER</u></h3>
+        <h4 id="b1"> - hover on me...</h4>
+        <h2 id="p0">welcome to class</h2>
+    </div></center><br><center>
+    <div class="container">
+        <h3>2)  <u>MOUSE ENTER</u></h3>
+        <h4 id="b2"> - touch me..</h4>
+        <p id="p1">Bye...</p>
+    </div></center><br>
+    <center>
+        <div class="container">
+            <h3>3)  <u>MOUSELeave</u></h3>
+            <h4 id="b3">- touch me and leave..</h4>
+            <p id="p2">Bye..</p>
+            </div>
+    </center><br><center>
+    <div class="container">
+        <h3 id="b4">4)  <u>MOUSE click</u></h3>
+        <img src="images/1.jpg" width="300" height="70" id="i4">
+    </div></center><br>
+    <center>
+        <div class="container">
+            <h3 id="b5">5)  <u>MOUSE Double click</u></h3>
+            <img src="images/2.jpg" width="300" height="70" id="i5">
+        </div></center>
+    <center>
+        <div class="container1">
+            <h3>6)  <u>Call back</u></h3>
+            <button id="b7">Hide</button>
+            <p id="1">click below to hide me slowly and get a alert msg</p>
+        </div></center><br>
+    <center>
+        <div class="container1">
+            <h3>7)  <u>Chaining</u></h3>
+            <h3 id="2">click below to slide me up and slide down slowly.</h3>   
+            <button id="b8">Click me</button>
+        </div>
+    </center><br>
+    
+        <div class="container2">
+            <center>
+            <h3>8)  <u>Set content</u></h3>
+            <p id="test2">click to below button to change....</p>  
+            <button id="btn2">Click me</button></center>
+        </div><br>
+    <center>
+        <div class="container">
+            <h3>9)  <u>change the attribute value</u></h3>
+            <p><a href="https://presidencyuniversity.in" id="presi">www.presidency university.com</a></p>
+            <button id="b10">Change the Value of the link by clicking on me...</button>
+        </div>
+    </center><br>
+    <center>
+        <div class="container">
+            <h3>10)  <u>getting data from the another page</u></h3>
+            <div id="div1"><p>get another text from another file</p></div>
+            <button id="b01">CLick me</button>
+        </div>
+    </center><br>
+    <div class="container3">
+        <center>
+        <h3>11)  <u>fade the content with toggle</u></h3>
+        <button id="b20">Click to fade in/out boxes</button><br><br>
+        <img src="images/1.jpg" width="400px"height="80px" id="90">
+        <br>
+        <img src="images/2.jpg" width="400px"height="80px" id="91">
+        <img src="images/3.jpg" width="400px"height="80px" id="92">
+        </center>
+    </div><br>
+    <center>
+        <div class="container5">
+            <h3>12)  <u>click on the panel to toggle</u></h3>
+            <div id="flip">Click to slide the panel down or up</div>
+            <img src="images/4.jpg" width="450px" height="300px"id="panel">
+        </div>
+    </center><br>
+    <center>
+        <div class="container5">
+            <h3>13)  <u>stop panel</u></h3>
+            <button id="s">Stop sliding</button>
+            <div id="f">Click to slide down panel</div>
+            <div id="p">welcome to web 2.0 class</div>
+        </div>
+    </center><br>
+    <center>
+        <div class="container5">
+            <h3>14)  <u>animation</u></h3>
+            <button id="bp">Start Animation</button>
+            <div style="background:#0c7a9b;height:100px;width:100px;position:absolute;" id="d8">You can animate be by clicking the above button</div>
+        </div>
+    </center><br><br>
+    <center>
+        <div class="container5"><br><br>
+            <h3>15)  <u>clear the div element</u></h3>
+            <div id="d99" style="height:100px;width:300px;border:1px solid black;background-color:rgb(113, 48, 97);">
+                <h2>color is created by the div element</h2>
+                </div>
+                <br>
+                <button id="bh">Remove the above box by clicking me...</button>
+        </div>
+    </center><br>
+    <center>
+        <div class="container5"><br><br>
+            <h3>16)  <u>empty the div element</u></h3>
+            <div id="d98" style="height:100px;width:300px;border:1px solid black;background-color:rgb(129, 129, 105);">
+                <p>WELCOME TO 4BCA-1</p>
+                <p>20221BCA0125</p>
+                </div>
+                <br>
+                <button id="bg">Empty the div element</button>
+        </div>
+    </center>
+</body>
+</html>
